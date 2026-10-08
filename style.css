@@ -1,0 +1,158 @@
+:root {
+    --bg: #f6f3ee;
+    --panel: #ffffff;
+    --panel-soft: #f0eee9;
+    --text: #1f1f1c;
+    --muted: #5d5b56;
+    --line: #e4dccd;
+    --accent: #2a5d5d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+}
+
+.page {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 26px 28px;
+}
+
+h1 {
+    margin: 0 0 6px;
+    font-size: clamp(2.1rem, 4vw, 3.2rem);
+    letter-spacing: -0.04em;
+}
+
+.role {
+    margin: 0 0 18px;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.intro {
+    margin: 0 0 22px;
+    color: var(--muted);
+}
+
+.section {
+    margin-top: 26px;
+}
+
+.section-title {
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.job {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.job:last-child {
+    border-bottom: none;
+}
+
+.job-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+
+.job-name {
+    font-weight: 700;
+}
+
+.job-company {
+    color: var(--muted);
+}
+
+.job-date {
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--muted);
+}
+
+li + li {
+    margin-top: 7px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.skills li {
+    background: var(--panel-soft);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 7px 10px;
+    font-size: 0.86rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.contact-item {
+    background: var(--panel-soft);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+
+.contact-item strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.contact-item a,
+.contact-item span {
+    color: var(--muted);
+}
+
+@media (max-width: 640px) {
+    .page {
+        padding: 20px 18px;
+    }
+
+    .job-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
